@@ -199,6 +199,12 @@ PAGES = (
     ("pages/*.html", "pages", "page.tmpl"),
 )
 
+# orgmode configuration
+# Add org files to your POSTS, PAGES
+POSTS = POSTS + (("posts/*.org", "posts", "post.tmpl"),)
+PAGES = PAGES + (("stories/*.org", "stories", "story.tmpl"),)
+
+
 
 # Below this point, everything is optional
 
@@ -280,6 +286,7 @@ COMPILERS = {
     # The resulting files have .php extensions, making it possible to run
     # them without reconfiguring your server to recognize them.
     "php": ('.php',),
+    "orgmode": ('.org'),
     # Pandoc detects the input from the source filename
     # but is disabled by default as it would conflict
     # with many of the others.
