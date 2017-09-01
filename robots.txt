@@ -1,0 +1,4 @@
+Sitemap: https://abellmann.github.io/sitemapindex.xml
+
+User-Agent: *
+Host: abellmann.github.io
