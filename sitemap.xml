@@ -7,83 +7,31 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://abellmann.github.io/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
- </url>
- <url>
-  <loc>https://abellmann.github.io/2012/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2017-09-01T16:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/archive.html</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2017-09-01T16:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/categories/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
- </url>
- <url>
-  <loc>https://abellmann.github.io/categories/blog/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
- </url>
- <url>
-  <loc>https://abellmann.github.io/categories/cat_nikola/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
- </url>
- <url>
-  <loc>https://abellmann.github.io/categories/demo/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
- </url>
- <url>
-  <loc>https://abellmann.github.io/categories/nikola/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
- </url>
- <url>
-  <loc>https://abellmann.github.io/categories/python/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2017-09-01T16:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/de/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
- </url>
- <url>
-  <loc>https://abellmann.github.io/de/2012/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2017-09-01T16:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/de/archive.html</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2017-09-01T16:44:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/de/categories/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
- </url>
- <url>
-  <loc>https://abellmann.github.io/de/categories/blog/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
- </url>
- <url>
-  <loc>https://abellmann.github.io/de/categories/cat_nikola/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
- </url>
- <url>
-  <loc>https://abellmann.github.io/de/categories/demo/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
- </url>
- <url>
-  <loc>https://abellmann.github.io/de/categories/nikola/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
- </url>
- <url>
-  <loc>https://abellmann.github.io/de/categories/python/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2017-09-01T16:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/de/galleries/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
- </url>
- <url>
-  <loc>https://abellmann.github.io/de/galleries/demo/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2017-09-01T16:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/de/pages/about-nikola/</loc>
@@ -161,17 +109,8 @@
   <xhtml:link rel="alternate" hreflang="en" href="https://abellmann.github.io/pages/theming/" />
  </url>
  <url>
-  <loc>https://abellmann.github.io/de/posts/welcome-to-nikola/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
-  <xhtml:link rel="alternate" hreflang="en" href="https://abellmann.github.io/posts/welcome-to-nikola/" />
- </url>
- <url>
   <loc>https://abellmann.github.io/galleries/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
- </url>
- <url>
-  <loc>https://abellmann.github.io/galleries/demo/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2017-09-01T16:45:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/listings/</loc>
@@ -243,10 +182,6 @@
  </url>
  <url>
   <loc>https://abellmann.github.io/pages/theming/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
- </url>
- <url>
-  <loc>https://abellmann.github.io/posts/welcome-to-nikola/</loc>
   <lastmod>2017-09-01T16:14:00Z</lastmod>
  </url>
 </urlset>
