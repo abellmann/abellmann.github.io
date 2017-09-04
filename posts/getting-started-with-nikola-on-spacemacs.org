@@ -1,0 +1,79 @@
+#+BEGIN_COMMENT
+.. title: Getting started with Nikola on spacemacs
+.. slug: getting-started-with-nikola-on-spacemacs
+.. date: 2017-09-04 20:45:00 UTC+02:00
+.. tags: emacs nikola blog 
+.. category: 
+.. link: 
+.. description: 
+.. type: text
+#+END_COMMENT
+
+Today I started my blogging journey with the [[https://getnikola.com/][Nikola]] static blog engine. Here is
+my experience so far.
+
+I found this blog engine by following [[https://www.youtube.com/watch?v=49kBWM3RQQ8&list=PL9KxKa8NpFxIcNQa9js7dQQIHc81b0-Xg][Mike Zamansky's Youtube channel]] on Emacs,
+where he published an emacs tutorial on [[https://cestlaz.github.io/posts/using-emacs-35-blogging/#.WamW6Y4z2qA][blogging]] with Nikola (using emacs orgmode
+as markup language). 
+
+Since I have been using Spacemacs now for a while and have always been looking
+for an easy way to use orgmode to write a blog, this just seemed like the
+perfect way to get started.
+
+Installing Nikola and deploying it on github was a breeze. I just had to follow
+the very simple [[https://getnikola.com/getting-started.html][installation guide]] for Nikola(for MacOs in my case). I also
+added the [[https://plugins.getnikola.com/v7/orgmode/][orgmode plugin]]. 
+
+To generate a blog post I am using yasnippet based on the sample provided by
+Mike and created a snippet, that looks something like this (in
+~/.emacs.d/snippets/org-mode/post)
+
+#+BEGIN_EXAMPLE
+# -*- mode: snippet -*-
+# name: a new blog post
+# key: post
+# --
+#+BEGIN_COMMENT
+  title: ${1: `(capitalize (replace-regexp-in-string "-\\|_" " " (file-name-base)))`}
+  slug: `(file-name-base)`
+  date: `(format-time-string "%Y-%m-%d %H:%M:%S UTC+01:00" (current-time))`
+  tags: $2
+  category:
+  link:
+  description:
+  type: text
+#+END_COMMENT
+#+END_EXAMPLE
+
+[[http://jr0cket.co.uk/2016/07/spacemacs-adding-your-own-yasnippets.html][Here]] is a guide on using yasnippet in spacemacs. And [[https://joaotavora.github.io/yasnippet/snippet-development.html][here]] is the documentation
+on writing yasnippets.
+
+I also added prodigy to spacemacs. This can be done by adding the "python" and
+"prodigy" layers to spacemacs. 
+
+The configuration of the prodigy service for nikola can then be done in the
+user-config section of .spacemacs as follows
+
+#+BEGIN_EXAMPLE emacs-lisp
+   (prodigy-define-service
+     :name "nikola"
+     :command "nikola"
+     :args '("auto")
+     :cwd "~/projects/abellmann.github.io"
+     :tags '(blog nikola)
+     :stop-signal 'sigint
+     :kill-process-buffer-on-stop t
+     )
+#+END_EXAMPLE
+
+To run the nikola service in spacemacs, the correct python virtual environment
+must be active. This can be done by calling =M-x pyenv-activate= and then
+selecting the venv directory prepared for nikola or by activation python-mode,
+followed by =SPC m V a=
+
+The nikola service can be run with =SPC a S= and then =s= on the
+"nikola" service to start the server. You can then open [[http:localhost:8000]] in
+your browser and the browser page gets refreshed with the new content every time
+you save your file, which makes checking the result pretty easy.
+
+To stop the nikola server, just hit =S= on the nikola service.
