@@ -6,23 +6,31 @@
     xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
+  <loc>https://abellmann.github.io/categories/emacs-nikola-blog.xml</loc>
+  <lastmod>2017-09-04T17:59:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://abellmann.github.io/de/categories/emacs-nikola-blog.xml</loc>
+  <lastmod>2017-09-04T17:59:00Z</lastmod>
+ </sitemap>
+ <sitemap>
   <loc>https://abellmann.github.io/de/galleries/rss.xml</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2017-09-04T17:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://abellmann.github.io/de/rss.xml</loc>
-  <lastmod>2017-09-01T16:44:00Z</lastmod>
+  <lastmod>2017-09-04T17:59:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://abellmann.github.io/galleries/rss.xml</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2017-09-04T17:55:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://abellmann.github.io/rss.xml</loc>
-  <lastmod>2017-09-01T16:44:00Z</lastmod>
+  <lastmod>2017-09-04T17:59:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://abellmann.github.io/sitemap.xml</loc>
-  <lastmod>2017-09-01T16:45:00Z</lastmod>
+  <lastmod>2017-09-04T17:59:00Z</lastmod>
  </sitemap>
 </sitemapindex>

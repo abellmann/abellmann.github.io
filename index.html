@@ -11,7 +11,7 @@
 <link rel="alternate" type="application/rss+xml" title="RSS (de)" href="de/rss.xml">
 <link rel="alternate" type="application/rss+xml" title="RSS (en)" href="rss.xml">
 <link rel="canonical" href="https://abellmann.github.io/">
-<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="assets/js/html5.js"></script><![endif]--><link rel="prefetch" href="posts/getting-started-with-nikola-on-spacemacs/" type="text/html">
 </head>
 <body>
 <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
@@ -72,6 +72,106 @@
 
     
 <div class="postindex">
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/getting-started-with-nikola-on-spacemacs/" class="u-url">Getting started with Nikola on spacemacs</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Andreas Bellmann
+            </span></p>
+            <p class="dateline"><a href="posts/getting-started-with-nikola-on-spacemacs/" rel="bookmark"><time class="published dt-published" datetime="2017-09-04T20:45:00+02:00" title="2017-09-04 20:45">2017-09-04 20:45</time></a></p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>
+Today I started my blogging journey with the <a href="https://getnikola.com/">Nikola</a> static blog engine. Here is
+my experience so far.
+</p>
+
+<p>
+I found this blog engine by following <a href="https://www.youtube.com/watch?v=49kBWM3RQQ8&amp;list=PL9KxKa8NpFxIcNQa9js7dQQIHc81b0-Xg">Mike Zamansky's Youtube channel</a> on Emacs,
+where he published an emacs tutorial on <a href="https://cestlaz.github.io/posts/using-emacs-35-blogging/#.WamW6Y4z2qA">blogging</a> with Nikola (using emacs orgmode
+as markup language). 
+</p>
+
+<p>
+Since I have been using Spacemacs now for a while and have always been looking
+for an easy way to use orgmode to write a blog, this just seemed like the
+perfect way to get started.
+</p>
+
+<p>
+Installing Nikola and deploying it on github was a breeze. I just had to follow
+the very simple <a href="https://getnikola.com/getting-started.html">installation guide</a> for Nikola(for MacOs in my case). I also
+added the <a href="https://plugins.getnikola.com/v7/orgmode/">orgmode plugin</a>. 
+</p>
+
+<p>
+To generate a blog post I am using yasnippet based on the sample provided by
+Mike and created a snippet, that looks something like this (in
+~/.emacs.d/snippets/org-mode/post)
+</p>
+
+<pre class="example">
+# -*- mode: snippet -*-
+# name: a new blog post
+# key: post
+# --
+#+BEGIN_COMMENT
+  title: ${1: `(capitalize (replace-regexp-in-string "-\\|_" " " (file-name-base)))`}
+  slug: `(file-name-base)`
+  date: `(format-time-string "%Y-%m-%d %H:%M:%S UTC+01:00" (current-time))`
+  tags: $2
+  category:
+  link:
+  description:
+  type: text
+#+END_COMMENT
+</pre>
+
+<p>
+<a href="http://jr0cket.co.uk/2016/07/spacemacs-adding-your-own-yasnippets.html">Here</a> is a guide on using yasnippet in spacemacs. And <a href="https://joaotavora.github.io/yasnippet/snippet-development.html">here</a> is the documentation
+on writing yasnippets.
+</p>
+
+<p>
+I also added prodigy to spacemacs. This can be done by adding the "python" and
+"prodigy" layers to spacemacs. 
+</p>
+
+<p>
+The configuration of the prodigy service for nikola can then be done in the
+user-config section of .spacemacs as follows
+</p>
+
+<pre class="example">
+(prodigy-define-service
+  :name "nikola"
+  :command "nikola"
+  :args '("auto")
+  :cwd "~/projects/abellmann.github.io"
+  :tags '(blog nikola)
+  :stop-signal 'sigint
+  :kill-process-buffer-on-stop t
+  )
+</pre>
+
+<p>
+To run the nikola service in spacemacs, the correct python virtual environment
+must be active. This can be done by calling <code>M-x pyenv-activate</code> and then
+selecting the venv directory prepared for nikola or by activation python-mode,
+followed by <code>SPC m V a</code>
+</p>
+
+<p>
+The nikola service can be run with <code>SPC a S</code> and then <code>s</code> on the
+"nikola" service to start the server. You can then open <a href="http:localhost:8000">http:localhost:8000</a> in
+your browser and the browser page gets refreshed with the new content every time
+you save your file, which makes checking the result pretty easy.
+</p>
+
+<p>
+To stop the nikola server, just hit <code>S</code> on the nikola service.
+</p>
+    </div>
+    </article>
 </div>
 
 

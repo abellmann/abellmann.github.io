@@ -1,2 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Engineering for DevOps</title><link>https://abellmann.github.io/</link><description>Software Engineering and DevOps Experiences</description><atom:link href="https://abellmann.github.io/de/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>de</language><copyright>Contents © 2017 &lt;a href="mailto:andreas.bellmann@gmail.com"&gt;Andreas Bellmann&lt;/a&gt; </copyright><lastBuildDate>Fri, 01 Sep 2017 16:44:59 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs></channel></rss>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Engineering for DevOps</title><link>https://abellmann.github.io/</link><description>Software Engineering and DevOps Experiences</description><atom:link href="https://abellmann.github.io/de/rss.xml" rel="self" type="application/rss+xml"></atom:link><language>de</language><copyright>Contents © 2017 &lt;a href="mailto:andreas.bellmann@gmail.com"&gt;Andreas Bellmann&lt;/a&gt; </copyright><lastBuildDate>Mon, 04 Sep 2017 18:45:06 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Getting started with Nikola on spacemacs</title><link>https://abellmann.github.io/de/posts/getting-started-with-nikola-on-spacemacs/</link><dc:creator>Andreas Bellmann</dc:creator><description>&lt;p&gt;
+Today I started my blogging journey with the &lt;a href="https://getnikola.com/"&gt;Nikola&lt;/a&gt; static blog engine. Here is
+my experience so far.
+&lt;/p&gt;
+
+&lt;p&gt;
+I found this blog engine by following &lt;a href="https://www.youtube.com/watch?v=49kBWM3RQQ8&amp;amp;list=PL9KxKa8NpFxIcNQa9js7dQQIHc81b0-Xg"&gt;Mike Zamansky's Youtube channel&lt;/a&gt; on Emacs,
+where he published an emacs tutorial on &lt;a href="https://cestlaz.github.io/posts/using-emacs-35-blogging/#.WamW6Y4z2qA"&gt;blogging&lt;/a&gt; with Nikola (using emacs orgmode
+as markup language). 
+&lt;/p&gt;
+
+&lt;p&gt;
+Since I have been using Spacemacs now for a while and have always been looking
+for an easy way to use orgmode to write a blog, this just seemed like the
+perfect way to get started.
+&lt;/p&gt;
+
+&lt;p&gt;
+Installing Nikola and deploying it on github was a breeze. I just had to follow
+the very simple &lt;a href="https://getnikola.com/getting-started.html"&gt;installation guide&lt;/a&gt; for Nikola(for MacOs in my case). I also
+added the &lt;a href="https://plugins.getnikola.com/v7/orgmode/"&gt;orgmode plugin&lt;/a&gt;. 
+&lt;/p&gt;
+
+&lt;p&gt;
+To generate a blog post I am using yasnippet based on the sample provided by
+Mike and created a snippet, that looks something like this (in
+~/.emacs.d/snippets/org-mode/post)
+&lt;/p&gt;
+
+&lt;pre class="example"&gt;
+# -*- mode: snippet -*-
+# name: a new blog post
+# key: post
+# --
+#+BEGIN_COMMENT
+  title: ${1: `(capitalize (replace-regexp-in-string "-\\|_" " " (file-name-base)))`}
+  slug: `(file-name-base)`
+  date: `(format-time-string "%Y-%m-%d %H:%M:%S UTC+01:00" (current-time))`
+  tags: $2
+  category:
+  link:
+  description:
+  type: text
+#+END_COMMENT
+&lt;/pre&gt;
+
+&lt;p&gt;
+&lt;a href="http://jr0cket.co.uk/2016/07/spacemacs-adding-your-own-yasnippets.html"&gt;Here&lt;/a&gt; is a guide on using yasnippet in spacemacs. And &lt;a href="https://joaotavora.github.io/yasnippet/snippet-development.html"&gt;here&lt;/a&gt; is the documentation
+on writing yasnippets.
+&lt;/p&gt;
+
+&lt;p&gt;
+I also added prodigy to spacemacs. This can be done by adding the "python" and
+"prodigy" layers to spacemacs. 
+&lt;/p&gt;
+
+&lt;p&gt;
+The configuration of the prodigy service for nikola can then be done in the
+user-config section of .spacemacs as follows
+&lt;/p&gt;
+
+&lt;pre class="example"&gt;
+(prodigy-define-service
+  :name "nikola"
+  :command "nikola"
+  :args '("auto")
+  :cwd "~/projects/abellmann.github.io"
+  :tags '(blog nikola)
+  :stop-signal 'sigint
+  :kill-process-buffer-on-stop t
+  )
+&lt;/pre&gt;
+
+&lt;p&gt;
+To run the nikola service in spacemacs, the correct python virtual environment
+must be active. This can be done by calling &lt;code&gt;M-x pyenv-activate&lt;/code&gt; and then
+selecting the venv directory prepared for nikola or by activation python-mode,
+followed by &lt;code&gt;SPC m V a&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+The nikola service can be run with &lt;code&gt;SPC a S&lt;/code&gt; and then &lt;code&gt;s&lt;/code&gt; on the
+"nikola" service to start the server. You can then open &lt;a href="http:localhost:8000"&gt;http:localhost:8000&lt;/a&gt; in
+your browser and the browser page gets refreshed with the new content every time
+you save your file, which makes checking the result pretty easy.
+&lt;/p&gt;
+
+&lt;p&gt;
+To stop the nikola server, just hit &lt;code&gt;S&lt;/code&gt; on the nikola service.
+&lt;/p&gt;</description><guid>https://abellmann.github.io/de/posts/getting-started-with-nikola-on-spacemacs/</guid><pubDate>Mon, 04 Sep 2017 18:45:00 GMT</pubDate></item></channel></rss>
