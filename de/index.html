@@ -72,7 +72,76 @@
 
     
 <div class="postindex">
-    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/getting-started-with-nikola-on-spacemacs/" class="u-url">Getting started with Nikola on spacemacs</a></h1>
+    <article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/integrate-outlook-calendar-into-org/" class="u-url">Integrate the outlook calendar into your orgmode agenda</a></h1>
+        <div class="metadata">
+            <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
+                Andreas Bellmann
+            </span></p>
+            <p class="dateline"><a href="posts/integrate-outlook-calendar-into-org/" rel="bookmark"><time class="published dt-published" datetime="2017-09-15T19:12:50+02:00" title="2017-09-15 19:12">2017-09-15 19:12</time></a></p>
+        </div>
+    </header><div class="e-content entry-content">
+    <p>
+I am using Outlook 365 at my company. All meetings are organized over outlook,
+but I could not see them in my orgmode agenda, which lead to problems in my
+daily planning, because I often forgot to plan for those meetings in my daily
+planning, which is done in orgmode.
+</p>
+
+
+<p>
+I have known <a href="https://github.com/kautsig/ews-orgmode">ews-orgmode</a> for a while and used it in the past with a different
+Exchange Server. But it was always a bit of a problem, because it was written in
+python with some modules, that are not easy to set up on windows (in particular
+lxml). Getting it to work often took several hours. 
+</p>
+
+<p>
+So today I tried to solve this issue. I started by creating a fork for
+ews-orgmode <a href="https://github.com/abellmann/ews-orgmode">here</a> to be able to do some modifications. To make the setup of
+python painless, I created a Dockerfile for the script. This makes it easy to
+run it on any platform without having to setup or configure python. I also added
+a sample entry in the config.cfg.sample for Office365.
+</p>
+
+<p>
+The process is now pretty simple (I tested this on my mac):
+</p>
+
+<ul class="org-ul">
+<li>Install docker and git
+</li>
+<li>clone the repository
+</li>
+</ul>
+<div class="highlight"><pre><span></span>git clone https://github.com/abellmann/ews-orgmode.git
+</pre></div>
+<ul class="org-ul">
+<li>Copy the config.cfg.sample to config.cfg and do the configuration for my user
+based on the sample for Office365
+</li>
+<li>create and run the docker image as described in the <a href="https://github.com/abellmann/ews-orgmode/blob/master/README.org">Readme</a> of the project..
+</li>
+</ul>
+<div class="highlight"><pre><span></span>docker build --tag ews-orgmode .
+docker run ews-orgmode
+</pre></div>
+<ul class="org-ul">
+<li>Create a little script, that copies the result to my agenda directory ( on ubuntu/macos)
+</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+/usr/local/bin/docker run ews-orgmode &gt; /Users/andreas.bellmann/TODO/wiki/outlook.org
+</pre></div>
+
+<ul class="org-ul">
+<li>Create a cronjob, that runs this script hourly
+</li>
+</ul>
+<div class="highlight"><pre><span></span>crontab -l
+<span class="m">0</span> * * * * /Users/andreas.bellmann/bin/ews-orgmode.sh
+</pre></div>
+    </div>
+    </article><article class="h-entry post-text"><header><h1 class="p-name entry-title"><a href="posts/getting-started-with-nikola-on-spacemacs/" class="u-url">Getting started with Nikola on spacemacs</a></h1>
         <div class="metadata">
             <p class="byline author vcard"><span class="byline-name fn" itemprop="author">
                 Andreas Bellmann

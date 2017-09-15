@@ -1,0 +1,56 @@
+#+BEGIN_COMMENT
+.. title: Integrate the outlook calendar into your orgmode agenda
+.. slug: integrate-outlook-calendar-into-org
+.. date: 2017-09-15 19:12:50 UTC+02:00
+.. tags: emacs orgmode exchange outlook
+.. category:
+.. link:
+.. description:
+.. type: text
+#+END_COMMENT
+
+I am using Outlook 365 at my company. All meetings are organized over outlook,
+but I could not see them in my orgmode agenda, which lead to problems in my
+daily planning, because I often forgot to plan for those meetings in my daily
+planning, which is done in orgmode.
+
+
+I have known [[https://github.com/kautsig/ews-orgmode][ews-orgmode]] for a while and used it in the past with a different
+Exchange Server. But it was always a bit of a problem, because it was written in
+python with some modules, that are not easy to set up on windows (in particular
+lxml). Getting it to work often took several hours. 
+
+So today I tried to solve this issue. I started by creating a fork for
+ews-orgmode [[https://github.com/abellmann/ews-orgmode][here]] to be able to do some modifications. To make the setup of
+python painless, I created a Dockerfile for the script. This makes it easy to
+run it on any platform without having to setup or configure python. I also added
+a sample entry in the config.cfg.sample for Office365.
+
+The process is now pretty simple (I tested this on my mac):
+
+- Install docker and git
+- clone the repository
+#+BEGIN_SRC sh
+git clone https://github.com/abellmann/ews-orgmode.git
+#+END_SRC
+- Copy the config.cfg.sample to config.cfg and do the configuration for my user
+  based on the sample for Office365
+- create and run the docker image as described in the [[https://github.com/abellmann/ews-orgmode/blob/master/README.org][Readme]] of the project..
+#+BEGIN_SRC sh
+docker build --tag ews-orgmode .
+docker run ews-orgmode
+#+END_SRC
+- Create a little script, that copies the result to my agenda directory ( on ubuntu/macos)
+#+BEGIN_SRC sh :file ~/bin/ews-orgmode.sh
+#!/bin/bash
+/usr/local/bin/docker run ews-orgmode > /Users/andreas.bellmann/TODO/wiki/outlook.org
+#+END_SRC
+
+- Create a cronjob, that runs this script hourly
+#+BEGIN_SRC sh
+crontab -l
+0 * * * * /Users/andreas.bellmann/bin/ews-orgmode.sh
+#+END_SRC
+ 
+
+ 

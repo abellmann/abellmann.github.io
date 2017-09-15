@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Engineering for DevOps (Einträge über emacs orgmode exchange outlook)</title><link>https://abellmann.github.io/</link><description></description><atom:link href="https://abellmann.github.io/de/categories/emacs-orgmode-exchange-outlook.xml" rel="self" type="application/rss+xml"></atom:link><language>de</language><copyright>Contents © 2017 &lt;a href="mailto:andreas.bellmann@gmail.com"&gt;Andreas Bellmann&lt;/a&gt; </copyright><lastBuildDate>Fri, 15 Sep 2017 18:08:48 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Integrate the outlook calendar into your orgmode agenda</title><link>https://abellmann.github.io/de/posts/integrate-outlook-calendar-into-org/</link><dc:creator>Andreas Bellmann</dc:creator><description>&lt;p&gt;
+I am using Outlook 365 at my company. All meetings are organized over outlook,
+but I could not see them in my orgmode agenda, which lead to problems in my
+daily planning, because I often forgot to plan for those meetings in my daily
+planning, which is done in orgmode.
+&lt;/p&gt;
+
+
+&lt;p&gt;
+I have known &lt;a href="https://github.com/kautsig/ews-orgmode"&gt;ews-orgmode&lt;/a&gt; for a while and used it in the past with a different
+Exchange Server. But it was always a bit of a problem, because it was written in
+python with some modules, that are not easy to set up on windows (in particular
+lxml). Getting it to work often took several hours. 
+&lt;/p&gt;
+
+&lt;p&gt;
+So today I tried to solve this issue. I started by creating a fork for
+ews-orgmode &lt;a href="https://github.com/abellmann/ews-orgmode"&gt;here&lt;/a&gt; to be able to do some modifications. To make the setup of
+python painless, I created a Dockerfile for the script. This makes it easy to
+run it on any platform without having to setup or configure python. I also added
+a sample entry in the config.cfg.sample for Office365.
+&lt;/p&gt;
+
+&lt;p&gt;
+The process is now pretty simple (I tested this on my mac):
+&lt;/p&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Install docker and git
+&lt;/li&gt;
+&lt;li&gt;clone the repository
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/abellmann/ews-orgmode.git
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Copy the config.cfg.sample to config.cfg and do the configuration for my user
+based on the sample for Office365
+&lt;/li&gt;
+&lt;li&gt;create and run the docker image as described in the &lt;a href="https://github.com/abellmann/ews-orgmode/blob/master/README.org"&gt;Readme&lt;/a&gt; of the project..
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker build --tag ews-orgmode .
+docker run ews-orgmode
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Create a little script, that copies the result to my agenda directory ( on ubuntu/macos)
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+/usr/local/bin/docker run ews-orgmode &amp;gt; /Users/andreas.bellmann/TODO/wiki/outlook.org
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Create a cronjob, that runs this script hourly
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;crontab -l
+&lt;span class="m"&gt;0&lt;/span&gt; * * * * /Users/andreas.bellmann/bin/ews-orgmode.sh
+&lt;/pre&gt;&lt;/div&gt;</description><guid>https://abellmann.github.io/de/posts/integrate-outlook-calendar-into-org/</guid><pubDate>Fri, 15 Sep 2017 17:12:50 GMT</pubDate></item></channel></rss>
