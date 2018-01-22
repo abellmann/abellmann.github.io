@@ -7,223 +7,243 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://abellmann.github.io/</loc>
-  <lastmod>2017-09-04T17:59:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/2017/</loc>
-  <lastmod>2017-09-04T17:59:00Z</lastmod>
+  <lastmod>2018-01-16T20:08:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/archive.html</loc>
-  <lastmod>2017-09-15T18:14:00Z</lastmod>
+  <lastmod>2018-01-22T19:53:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/categories/</loc>
-  <lastmod>2017-09-15T18:04:00Z</lastmod>
+  <lastmod>2018-01-22T19:05:00Z</lastmod>
  </url>
  <url>
-  <loc>https://abellmann.github.io/categories/emacs-nikola-blog/</loc>
-  <lastmod>2017-09-04T17:59:00Z</lastmod>
+  <loc>https://abellmann.github.io/categories/blog/</loc>
+  <lastmod>2018-01-22T19:05:00Z</lastmod>
  </url>
  <url>
-  <loc>https://abellmann.github.io/categories/emacs-orgmode-exchange-outlook/</loc>
-  <lastmod>2017-09-15T18:04:00Z</lastmod>
+  <loc>https://abellmann.github.io/categories/emacs/</loc>
+  <lastmod>2018-01-22T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://abellmann.github.io/categories/exchange/</loc>
+  <lastmod>2018-01-22T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://abellmann.github.io/categories/nikola/</loc>
+  <lastmod>2018-01-22T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://abellmann.github.io/categories/orgmode/</loc>
+  <lastmod>2018-01-22T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://abellmann.github.io/categories/outlook/</loc>
+  <lastmod>2018-01-22T19:05:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/de/</loc>
-  <lastmod>2017-09-04T17:59:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/de/2017/</loc>
-  <lastmod>2017-09-04T17:59:00Z</lastmod>
+  <lastmod>2018-01-16T20:08:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/de/archive.html</loc>
-  <lastmod>2017-09-15T18:14:00Z</lastmod>
+  <lastmod>2018-01-22T19:53:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/de/categories/</loc>
-  <lastmod>2017-09-15T18:04:00Z</lastmod>
+  <lastmod>2018-01-22T19:05:00Z</lastmod>
  </url>
  <url>
-  <loc>https://abellmann.github.io/de/categories/emacs-nikola-blog/</loc>
-  <lastmod>2017-09-04T17:59:00Z</lastmod>
+  <loc>https://abellmann.github.io/de/categories/blog/</loc>
+  <lastmod>2018-01-22T19:05:00Z</lastmod>
  </url>
  <url>
-  <loc>https://abellmann.github.io/de/categories/emacs-orgmode-exchange-outlook/</loc>
-  <lastmod>2017-09-15T18:04:00Z</lastmod>
+  <loc>https://abellmann.github.io/de/categories/emacs/</loc>
+  <lastmod>2018-01-22T19:05:00Z</lastmod>
  </url>
  <url>
-  <loc>https://abellmann.github.io/de/galleries/</loc>
-  <lastmod>2017-09-01T16:45:00Z</lastmod>
+  <loc>https://abellmann.github.io/de/categories/exchange/</loc>
+  <lastmod>2018-01-22T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://abellmann.github.io/de/categories/nikola/</loc>
+  <lastmod>2018-01-22T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://abellmann.github.io/de/categories/orgmode/</loc>
+  <lastmod>2018-01-22T19:05:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://abellmann.github.io/de/categories/outlook/</loc>
+  <lastmod>2018-01-22T19:05:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/de/pages/about-nikola/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://abellmann.github.io/pages/about-nikola/" />
  </url>
  <url>
   <loc>https://abellmann.github.io/de/pages/bootstrap-demo/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://abellmann.github.io/pages/bootstrap-demo/" />
  </url>
  <url>
   <loc>https://abellmann.github.io/de/pages/charts/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://abellmann.github.io/pages/charts/" />
  </url>
  <url>
   <loc>https://abellmann.github.io/de/pages/creating-a-theme/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://abellmann.github.io/pages/creating-a-theme/" />
  </url>
  <url>
   <loc>https://abellmann.github.io/de/pages/dr-nikolas-vendetta/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://abellmann.github.io/pages/dr-nikolas-vendetta/" />
  </url>
  <url>
   <loc>https://abellmann.github.io/de/pages/extending/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://abellmann.github.io/pages/extending/" />
  </url>
  <url>
   <loc>https://abellmann.github.io/de/pages/handbook/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://abellmann.github.io/pages/handbook/" />
  </url>
  <url>
   <loc>https://abellmann.github.io/de/pages/internals/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://abellmann.github.io/pages/internals/" />
  </url>
  <url>
   <loc>https://abellmann.github.io/de/pages/listings-demo/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://abellmann.github.io/pages/listings-demo/" />
  </url>
  <url>
   <loc>https://abellmann.github.io/de/pages/path-handlers/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://abellmann.github.io/pages/path-handlers/" />
  </url>
  <url>
   <loc>https://abellmann.github.io/de/pages/quickref/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://abellmann.github.io/pages/quickref/" />
  </url>
  <url>
   <loc>https://abellmann.github.io/de/pages/quickstart/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://abellmann.github.io/pages/quickstart/" />
  </url>
  <url>
   <loc>https://abellmann.github.io/de/pages/slides-demo/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://abellmann.github.io/pages/slides-demo/" />
  </url>
  <url>
   <loc>https://abellmann.github.io/de/pages/social_buttons/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://abellmann.github.io/pages/social_buttons/" />
  </url>
  <url>
   <loc>https://abellmann.github.io/de/pages/theming/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://abellmann.github.io/pages/theming/" />
  </url>
  <url>
   <loc>https://abellmann.github.io/de/posts/getting-started-with-nikola-on-spacemacs/</loc>
-  <lastmod>2017-09-04T17:59:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://abellmann.github.io/posts/getting-started-with-nikola-on-spacemacs/" />
  </url>
  <url>
   <loc>https://abellmann.github.io/de/posts/integrate-outlook-calendar-into-org/</loc>
-  <lastmod>2017-09-15T18:04:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
   <xhtml:link rel="alternate" hreflang="en" href="https://abellmann.github.io/posts/integrate-outlook-calendar-into-org/" />
  </url>
  <url>
-  <loc>https://abellmann.github.io/galleries/</loc>
-  <lastmod>2017-09-01T16:45:00Z</lastmod>
- </url>
- <url>
   <loc>https://abellmann.github.io/listings/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
- </url>
- <url>
-  <loc>https://abellmann.github.io/listings/__pycache__/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:08:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/listings/hello.py.html</loc>
-  <lastmod>2017-09-15T18:14:00Z</lastmod>
+  <lastmod>2018-01-22T19:52:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/pages/about-nikola/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/pages/bootstrap-demo/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/pages/charts/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/pages/creating-a-theme/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/pages/dr-nikolas-vendetta/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/pages/extending/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/pages/handbook/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/pages/internals/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/pages/listings-demo/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/pages/path-handlers/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/pages/quickref/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/pages/quickstart/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/pages/slides-demo/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/pages/social_buttons/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/pages/theming/</loc>
-  <lastmod>2017-09-01T16:14:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/posts/getting-started-with-nikola-on-spacemacs/</loc>
-  <lastmod>2017-09-04T17:59:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
  </url>
  <url>
   <loc>https://abellmann.github.io/posts/integrate-outlook-calendar-into-org/</loc>
-  <lastmod>2017-09-15T18:04:00Z</lastmod>
+  <lastmod>2018-01-16T20:09:00Z</lastmod>
  </url>
 </urlset>

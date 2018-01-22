@@ -2,10 +2,10 @@
 .. title: Integrate the outlook calendar into your orgmode agenda
 .. slug: integrate-outlook-calendar-into-org
 .. date: 2017-09-15 19:12:50 UTC+02:00
-.. tags: emacs orgmode exchange outlook
+.. tags: emacs,orgmode,exchange,outlook
 .. category:
 .. link:
-.. description:
+.. description: Integrate the outlook calendar into your orgmode agenda
 .. type: text
 #+END_COMMENT
 

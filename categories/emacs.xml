@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/"><channel><title>Engineering for DevOps (Posts about emacs)</title><link>https://abellmann.github.io/</link><description></description><atom:link type="application/rss+xml" rel="self" href="https://abellmann.github.io/categories/emacs.xml"></atom:link><language>en</language><copyright>Contents © 2018 &lt;a href="mailto:andreas.bellmann@gmail.com"&gt;Andreas Bellmann&lt;/a&gt; </copyright><lastBuildDate>Mon, 22 Jan 2018 19:53:07 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Integrate the outlook calendar into your orgmode agenda</title><link>https://abellmann.github.io/posts/integrate-outlook-calendar-into-org/</link><dc:creator>Andreas Bellmann</dc:creator><description>&lt;p&gt;
+I am using Outlook 365 at my company. All meetings are organized over outlook,
+but I could not see them in my orgmode agenda, which lead to problems in my
+daily planning, because I often forgot to plan for those meetings in my daily
+planning, which is done in orgmode.
+&lt;/p&gt;
+
+
+&lt;p&gt;
+I have known &lt;a href="https://github.com/kautsig/ews-orgmode"&gt;ews-orgmode&lt;/a&gt; for a while and used it in the past with a different
+Exchange Server. But it was always a bit of a problem, because it was written in
+python with some modules, that are not easy to set up on windows (in particular
+lxml). Getting it to work often took several hours. 
+&lt;/p&gt;
+
+&lt;p&gt;
+So today I tried to solve this issue. I started by creating a fork for
+ews-orgmode &lt;a href="https://github.com/abellmann/ews-orgmode"&gt;here&lt;/a&gt; to be able to do some modifications. To make the setup of
+python painless, I created a Dockerfile for the script. This makes it easy to
+run it on any platform without having to setup or configure python. I also added
+a sample entry in the config.cfg.sample for Office365.
+&lt;/p&gt;
+
+&lt;p&gt;
+The process is now pretty simple (I tested this on my mac):
+&lt;/p&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Install docker and git
+&lt;/li&gt;
+&lt;li&gt;clone the repository
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/abellmann/ews-orgmode.git
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Copy the config.cfg.sample to config.cfg and do the configuration for my user
+based on the sample for Office365
+&lt;/li&gt;
+&lt;li&gt;create and run the docker image as described in the &lt;a href="https://github.com/abellmann/ews-orgmode/blob/master/README.org"&gt;Readme&lt;/a&gt; of the project..
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;docker build --tag ews-orgmode .
+docker run ews-orgmode
+&lt;/pre&gt;&lt;/div&gt;
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Create a little script, that copies the result to my agenda directory ( on ubuntu/macos)
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+/usr/local/bin/docker run ews-orgmode &amp;gt; /Users/andreas.bellmann/TODO/wiki/outlook.org
+&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul class="org-ul"&gt;
+&lt;li&gt;Create a cronjob, that runs this script hourly
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;crontab -l
+&lt;span class="m"&gt;0&lt;/span&gt; * * * * /Users/andreas.bellmann/bin/ews-orgmode.sh
+&lt;/pre&gt;&lt;/div&gt;</description><category>emacs</category><category>exchange</category><category>orgmode</category><category>outlook</category><guid>https://abellmann.github.io/posts/integrate-outlook-calendar-into-org/</guid><pubDate>Fri, 15 Sep 2017 17:12:50 GMT</pubDate></item><item><title>Getting started with Nikola on spacemacs</title><link>https://abellmann.github.io/posts/getting-started-with-nikola-on-spacemacs/</link><dc:creator>Andreas Bellmann</dc:creator><description>&lt;p&gt;
+Today I started my blogging journey with the &lt;a href="https://getnikola.com/"&gt;Nikola&lt;/a&gt; static blog engine. Here is
+my experience so far.
+&lt;/p&gt;
+
+&lt;p&gt;
+I found this blog engine by following &lt;a href="https://www.youtube.com/watch?v=49kBWM3RQQ8&amp;amp;list=PL9KxKa8NpFxIcNQa9js7dQQIHc81b0-Xg"&gt;Mike Zamansky's Youtube channel&lt;/a&gt; on Emacs,
+where he published an emacs tutorial on &lt;a href="https://cestlaz.github.io/posts/using-emacs-35-blogging/#.WamW6Y4z2qA"&gt;blogging&lt;/a&gt; with Nikola (using emacs orgmode
+as markup language). 
+&lt;/p&gt;
+
+&lt;p&gt;
+Since I have been using Spacemacs now for a while and have always been looking
+for an easy way to use orgmode to write a blog, this just seemed like the
+perfect way to get started.
+&lt;/p&gt;
+
+&lt;p&gt;
+Installing Nikola and deploying it on github was a breeze. I just had to follow
+the very simple &lt;a href="https://getnikola.com/getting-started.html"&gt;installation guide&lt;/a&gt; for Nikola(for MacOs in my case). I also
+added the &lt;a href="https://plugins.getnikola.com/v7/orgmode/"&gt;orgmode plugin&lt;/a&gt;. 
+&lt;/p&gt;
+
+&lt;p&gt;
+To generate a blog post I am using yasnippet based on the sample provided by
+Mike and created a snippet, that looks something like this (in
+~/.emacs.d/snippets/org-mode/post)
+&lt;/p&gt;
+
+&lt;pre class="example"&gt;
+# -*- mode: snippet -*-
+# name: a new blog post
+# key: post
+# --
+#+BEGIN_COMMENT
+.. title: ${1: `(capitalize (replace-regexp-in-string "-\\|_" " " (file-name-base)))`}
+.. slug: `(file-name-base)`
+.. date: `(format-time-string "%Y-%m-%d %H:%M:%S UTC+01:00" (current-time))`
+.. tags: $2
+.. category:
+.. link:
+.. description:
+.. type: text
+#+END_COMMENT
+&lt;/pre&gt;
+
+&lt;p&gt;
+&lt;a href="http://jr0cket.co.uk/2016/07/spacemacs-adding-your-own-yasnippets.html"&gt;Here&lt;/a&gt; is a guide on using yasnippet in spacemacs. And &lt;a href="https://joaotavora.github.io/yasnippet/snippet-development.html"&gt;here&lt;/a&gt; is the documentation
+on writing yasnippets.
+&lt;/p&gt;
+
+&lt;p&gt;
+I also added prodigy to spacemacs. This can be done by adding the "python" and
+"prodigy" layers to spacemacs. 
+&lt;/p&gt;
+
+&lt;p&gt;
+The configuration of the prodigy service for nikola can then be done in the
+user-config section of .spacemacs as follows
+&lt;/p&gt;
+
+&lt;pre class="example"&gt;
+(prodigy-define-service
+  :name "nikola"
+  :command "nikola"
+  :args '("auto")
+  :cwd "~/projects/abellmann.github.io"
+  :tags '(blog nikola)
+  :stop-signal 'sigint
+  :kill-process-buffer-on-stop t
+  )
+&lt;/pre&gt;
+
+&lt;p&gt;
+To run the nikola service in spacemacs, the correct python virtual environment
+must be active. This can be done by calling &lt;code&gt;M-x pyenv-activate&lt;/code&gt; and then
+selecting the venv directory prepared for nikola or by activation python-mode,
+followed by &lt;code&gt;SPC m V a&lt;/code&gt;
+&lt;/p&gt;
+
+&lt;p&gt;
+The nikola service can be run with &lt;code&gt;SPC a S&lt;/code&gt; and then &lt;code&gt;s&lt;/code&gt; on the
+"nikola" service to start the server. You can then open &lt;a href="http:localhost:8000"&gt;http:localhost:8000&lt;/a&gt; in
+your browser and the browser page gets refreshed with the new content every time
+you save your file, which makes checking the result pretty easy.
+&lt;/p&gt;
+
+&lt;p&gt;
+To stop the nikola server, just hit &lt;code&gt;S&lt;/code&gt; on the nikola service.
+&lt;/p&gt;</description><category>blog</category><category>emacs</category><category>nikola</category><guid>https://abellmann.github.io/posts/getting-started-with-nikola-on-spacemacs/</guid><pubDate>Mon, 04 Sep 2017 18:45:00 GMT</pubDate></item></channel></rss>
