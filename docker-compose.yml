@@ -4,7 +4,10 @@ services:
     environment:
       - http_proxy
       - https_proxy
-    image: abellmann/nikola-orgmode
+      - git_user_name=abellmann
+      - git_user_email=andreas.bellmann@gmail.com
+    build:
+      context: .
     ports:
       - "8000:8000"
     volumes:

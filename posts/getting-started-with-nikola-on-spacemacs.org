@@ -2,10 +2,10 @@
 .. title: Getting started with Nikola on spacemacs
 .. slug: getting-started-with-nikola-on-spacemacs
 .. date: 2017-09-04 20:45:00 UTC+02:00
-.. tags: emacs nikola blog 
+.. tags: emacs,nikola,blog 
 .. category: 
 .. link: 
-.. description: 
+.. description: Getting started with Nikola on spacemacs
 .. type: text
 #+END_COMMENT
 
